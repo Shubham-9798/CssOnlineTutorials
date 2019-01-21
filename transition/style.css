@@ -1,0 +1,42 @@
+.st{
+	opactiy:1;
+	font-size:20px;
+	transform: scale(1);
+
+	transition: all 1.5s ease-out;
+}
+
+.st:hover{
+	opacity: 0;
+	font-size: 30px;
+	/*transform: scale(2);*/
+}
+
+.box{
+	position: relative;
+	width : 200px;
+	height :200px;
+	background-color : pink;
+
+}
+
+.box-wrapper {
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transform: scale(0);
+	background-color: grey;
+	height: 200px;
+	transition: all .5s ease-out;
+	z-index: 999;
+}
+
+.box:hover .box-wrapper{
+	/*height: 200px;*/
+	transform: scale(1);
+	opacity: 1;
+	/*transform: translateY(50px);*/
+}
