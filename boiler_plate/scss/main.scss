@@ -1,0 +1,48 @@
+@mixin easeOut {
+	transition: all 0.5s ease-out;
+  }
+
+
+
+html {
+	margin: 0;
+}
+body {
+	background: rgb(37, 10, 10);
+	color: white;
+}
+
+.navbar {
+	background-color: rgb(129, 197, 127);
+}
+
+.nav-item {
+	position: relative;
+	margin-right: 15px;
+
+	&.open {
+       
+	}
+}
+.btn-t {
+	display: none;
+	
+}
+
+
+@media only screen and (max-width: 786px) {
+	.nav-item {
+      display: block;
+	
+		&.open {
+		   
+		}
+	}
+
+
+	.btn-t {
+		display: block;	
+	}
+
+}
+

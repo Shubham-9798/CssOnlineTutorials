@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+body, html {
+	width: 100%;
+	/*overflow-x:none; */
+}
+
+.body{
+	/*min-width: 100%;*/
+	z-index: 0;
+	background-color: #0A3D62;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+#menu-bar {
+	/*background-color: red;*/
+}
+
+.menu-item {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	padding: 3px;
+	opacity: 1;
+	transition: all .4s ease-out;
+
+
+}
+
+.menu-item:hover{
+	cursor: pointer;
+	opacity: .8;
+}
+
+.menu-item.show {
+	display: block;
+
+	transform: translateX(0px);
+	transition: all .6s ease-out;
+
+}
+
+
+#menu-bar.show {
+	background-color: green;
+	width: 400px;
+	/*transform: translate(0px);*/
+
+	display: block;
+    /*left: 0;*/
+      transition: all .5s ease-in-out;
+	transform: translateX(0) scaleY(1);
+    
+
+}
+
+.img-body img {
+	height: 500px!important;
+}
+
+.menu-drop-down{
+	background-color: aliceblue;
+	margin-top: 8px;
+	/* position: absolute; */
+	display: none;
+}
+
+.menu-drop-down > div {
+	color: black;
+	/* display: none; */
+}
+
+.menu-drop-down.drop {
+   display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    #menu-toggle {
+    	display: block;
+    }
+    #menu-bar {
+      width: 0px;
+      position: absolute;
+      left: 0px;      
+    }
+
+    .menu-item {
+    /*transform: translateX(400px);	*/
+    color: white;
+	display: none;
+	}
+	
+	.img-body img {
+		position: absolute;
+		height: 300px!important;
+		transform: scale(2);
+		z-index: -5;
+	}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 400px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 400px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 400px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 400px),
+only screen and (                min-resolution: 192dpi) and (min-width: 400px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 400px) { 
+
+  /* Small screen, retina, stuff to override above media query */
+
+}
